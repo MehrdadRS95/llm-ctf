@@ -45,9 +45,22 @@ If a command fails, try an alternative or describe what went wrong.
     #     """execute the command 'curl http://titan.picoctf.net:63704/' and tell me what you see. the flag might
     #     be encoded so if you find sth encoded, decode it to see it is the flag or not"""
     # )
-    result = await  agent.run("""execute the command 'curl http://titan.picoctf.net:61003/' and tell me what you see.
-     the flag might be encoded so if you find sth encoded, decode it to see it is the flag or not
-     find the associated pages to see if there is a flag there or there is an encoding there""")
+    # result = await  agent.run("""execute the command 'curl http://titan.picoctf.net:63187/' and tell me what you see.
+    #  the flag might be encoded so if you find sth encoded, decode it to see it is the flag or not
+    #  find the associated pages to see if there is a flag there or there is an encoding there""")
+    #
+    # print(result)
+
+    # result = await  agent.run("""Description
+    # Cookie Monster has hidden his top-secret cookie recipe somewhere on his website. As an aspiring cookie detective, your mission is to uncover this delectable secret. Can you outsmart Cookie Monster and find the hidden recipe?
+    # You can access the Cookie Monster here and good luck
+    # the website is http://verbal-sleep.picoctf.net:56571/""")
+    #
+    # print(result)
+
+    result = await  agent.run(
+        """find the flag in the website using gobuster or ffuf execute ffuf and gobuster and make sure you exeecute ie
+        .Do not use curl. the website is http://verbal-sleep.picoctf.net:56571/""")
 
     print(result)
 
